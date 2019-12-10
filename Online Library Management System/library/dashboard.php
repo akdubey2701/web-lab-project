@@ -66,7 +66,7 @@ $issuedbooks=$query1->rowCount();
                       <div class="alert alert-warning back-widget-set text-center">
                             <i class="fa fa-recycle fa-5x"></i>
 <?php 
-$rsts=0;
+$rsts=1;
 $sql2 ="SELECT id from tblissuedbookdetails where StudentID=:sid and RetrunStatus=:rsts";
 $query2 = $dbh -> prepare($sql2);
 $query2->bindParam(':sid',$sid,PDO::PARAM_STR);
@@ -77,7 +77,7 @@ $returnedbooks=$query2->rowCount();
 ?>
 
                             <h3><?php echo htmlentities($returnedbooks);?></h3>
-                          Books Not Returned Yet
+                          Books Returned 
                         </div>
                     </div>
         </div>
