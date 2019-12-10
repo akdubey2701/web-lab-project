@@ -100,7 +100,7 @@ $returnedbooks=$query2->rowCount();
                             <i class="fa fa-users fa-5x"></i>
                             <?php 
 $sql3 ="SELECT id from tblstudents ";
-$query3 = $dbh -> prepare($sql1);
+$query3 = $dbh -> prepare($sql3);
 $query3->execute();
 $results3=$query3->fetchAll(PDO::FETCH_OBJ);
 $regstds=$query3->rowCount();
@@ -139,7 +139,7 @@ $listdathrs=$query4->rowCount();
                             <i class="fa fa-file-archive-o fa-5x"></i>
 <?php 
 $sql5 ="SELECT id from tblcategory ";
-$query5 = $dbh -> prepare($sql1);
+$query5 = $dbh -> prepare($sql5);
 $query5->execute();
 $results5=$query5->fetchAll(PDO::FETCH_OBJ);
 $listdcats=$query5->rowCount();
@@ -188,10 +188,12 @@ $listdcats=$query5->rowCount();
                             <img src="assets/img/2.jpg" alt="" />
                           
                         </div>
+
                         <div class="item">
                             <img src="assets/img/3.jpg" alt="" />
                            
                         </div>
+                        
                     </div>
                     <!--INDICATORS-->
                      <ol class="carousel-indicators">
